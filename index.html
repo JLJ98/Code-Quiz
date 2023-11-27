@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Quiz</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <div class="quiz-container">
+    <h1>Coding Quiz</h1>
+
+    <div class="question" id="question1">
+      <p>1. What does HTML stand for?</p>
+      <ul class="options" id="options1">
+        <li class="option"><input type="radio" name="q1" value="a"> Hyper Text Markup Language</li>
+        <li class="option"><input type="radio" name="q1" value="b"> Hyperlinks and Text Markup Language</li>
+        <li class="option"><input type="radio" name="q1" value="c"> Home Tool Markup Language</li>
+      </ul>
+    </div>
+
+    <div class="question" id="question2">
+      <p>2. Which HTML tag is used to create a hyperlink?</p>
+      <ul class="options" id="options2">
+        <li class="option"><input type="radio" name="q2" value="a"> &lt;link&gt;</li>
+        <li class="option"><input type="radio" name="q2" value="b"> &lt;a&gt;</li>
+        <li class="option"><input type="radio" name="q2" value="c"> &lt;href&gt;</li>
+      </ul>
+    </div>
+
+    <!-- Add more questions as needed -->
+
+    <button onclick="submitQuiz()">Submit</button>
+
+  </div>
+
+  <script>
+    function submitQuiz() {
+      // Your logic to grade the quiz and display results goes here
+      // You can access selected options using document.querySelector('input[name="q1"]:checked').value
+      // and similar for other questions
+      // Display results to the user or perform any other desired actions
+      alert('Quiz submitted!'); // Placeholder action
+    }
+  </script>
+<script src="assets/script.js"></script>
+</body>
+
+</html>
