@@ -45,7 +45,7 @@ This quiz is designed to be user-friendly and interactive, making it an enjoyabl
 ## Links
 
 ![Screenshot of Code Quiz Webiste](assets/images/Code_quiz.png)
-Link to Deployed App: (https://jlj98.github.io/Password-Generator-/)
+Link to Deployed App: (https://jlj98.github.io/Code-Quiz/)
 
 ## Credits
 
