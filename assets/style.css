@@ -1,40 +1,219 @@
+/* General styling for the page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+  font-family: 'Arial', sans-serif; /* Set font for the body */
+  text-align: center; /* Center-align text */
+}
+
+/* Reset styling for the unordered list */
+ul {
+  list-style-type: none; /* Remove list item bullets */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for heading 1 */
+h1 {
+  font-size: 36px; 
+  text-align: center; /* Center-align heading */
+  margin-bottom: 30px; /* Set margin at the bottom */
+}
+
+/* Styling for paragraphs */
+p {
+  font-size: 18px; 
+  color: #000000; /* Set text color */
+  text-align: center; /* Center-align text */
+  margin-bottom: 40px; /* Set margin at the bottom */
+  line-height: 1.6; /* Set line height for better readability */
+  word-wrap: break-word; /* Allow long words to break into a new line */
+}
+
+/* Apply Roboto font to heading 1 and paragraphs */
+h1, p {
+  font-family: "Roboto", sans-serif;
+}
+
+/* CSS class to hide an element */
+.hidden {
+  display: none;
+}
+
+/* Styling for the start button */
+#start-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the start button */
+#start-button:hover {
+  background-color: #555;
+}
+
+/* Styling for the timer */
+#timer {
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  color: #ffffff; /* Set text color */
+  animation: countdown 60s linear infinite; /* Apply countdown animation */
+}
+
+/* Styling for the feedback message */
+#feedback-message {
+  color: #000000; /* Set text color for the feedback message */
+}
+
+/* Styling for the animated clock icon */
+.clock-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff; /* Set background color */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+/* Styling for clock icon elements */
+.clock-icon::before,
+.clock-icon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background-color: #000; /* Set color for clock hands */
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 100%;
+}
+
+/* Transformation for clock hands */
+.clock-icon::before {
+  transform: translate(-50%, -100%) rotate(30deg);
+}
+
+.clock-icon::after {
+  transform: translate(-50%, -100%) rotate(60deg);
+}
+
+/* Animation for the clock icon rotation */
+@keyframes rotateClock {
+  from {
+    transform: rotate(0deg);
   }
-  
-  h1 {
-    text-align: center;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .quiz-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .question {
-    margin-bottom: 20px;
-  }
-  
-  .options {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .option {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+}
+
+/* Apply clock rotation animation */
+#animated-clock {
+  animation: rotateClock 60s linear infinite;
+}
+
+/* Styling for the choices list */
+#choices {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for individual choices */
+#choices li {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+/* Styling for the end screen */
+#end-screen {
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto; /* Center the end screen */
+}
+
+/* Styling for the submit score button */
+#submit-score {
+  margin-top: 10px;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit score button */
+#submit-score:hover {
+  background-color: #333333;
+}
+
+/* Styling for the try again button */
+#try-again {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the try again button */
+#try-again:hover {
+  background-color: #555;
+}
+
+/* Additional styles for a more interesting color scheme */
+body {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for choices list items */
+#choices li:hover {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+/* Styling for the end screen with a different color scheme */
+#end-screen {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+/* Styling for the submit score button with a different color scheme */
+#submit-score {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Hover effect for the submit score button with a different color scheme */
+#submit-score:hover {
+  background-color: #555;
+}
+
+/* Styling for the high scores container */
+#high-scores-container {
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 300px;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for high scores container heading */
+#high-scores-container h2 {
+  font-size: 24px;
